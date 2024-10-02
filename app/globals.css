@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.newBanner {
+  @apply bg-[url('../public/images/carosalImage.webp')]  bg-contain;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+.slick-active > .active-dot {
+  @apply bg-yellow-500 border border-black;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #e68b8b !important;
+}
+.slick-disabled {
+  @apply !hidden;
+}
+.scrollable-container {
+  scrollbar-width: thin;
+  scrollbar-color: #ef4444 #edf2f7;
+}
+.scrollable-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background: #edf2f7;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background-color: #ef4444;
+  border-radius: 10px;
+  border: 2px solid #edf2f7;
+}
+
+@media (max-width: 1023px) {
+  .newBanner-mobile-hidden {
+    background-image: none !important;
+  }
+}
